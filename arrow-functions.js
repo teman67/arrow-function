@@ -193,3 +193,45 @@ const people = [
   const candidates2 = students2.filter(hasStrongSkills).map(student => student.name);
   console.log(candidates)
   console.log(candidates2)
+
+
+  // reduce method
+
+  let numbers= [4,1,2,3,4,5];
+  let sumNum = numbers.reduce((acc,curr) => acc+curr);
+  console.log(sumNum)
+  let sumNum2 = numbers.reduce((acc,curr) => acc+curr , 0);
+  console.log(sumNum2)
+  let sumNum3 = numbers.reduce((acc,curr) => acc+curr , 6);
+  console.log(sumNum3)
+
+
+  // Summing an array of numbers:
+
+
+const teamMembers = [
+    {
+      name: 'Andrew',
+      profession: 'Developer',
+      yrsExperience: 5
+    },
+    {
+      name: 'Ariel',
+      profession: 'Developer',
+      yrsExperience: 7
+    },
+    {
+      name: 'Michael',
+      profession: 'Designer',
+      yrsExperience: 1
+    },
+    {
+      name: 'Kelly',
+      profession: 'Designer',
+      yrsExperience: 3
+    }
+  ];
+  
+  // Totaling a specific object property
+  let totalExp = teamMembers.reduce((acc,curr) => acc+curr.yrsExperience,0);
+  console.log('totalExp' , totalExp)
