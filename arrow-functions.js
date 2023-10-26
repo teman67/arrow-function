@@ -57,3 +57,23 @@ const sumRest = (a,b,c,...rest) => {
 
 let sum = sumRest (1,2,3,4,5,6);
 console.log(sum)
+
+/* Destructining assignment */
+
+let age =[23, 34,65];
+let [john,anna,max] = age;
+console.log('john age:', john);
+console.log(anna);
+
+let lang=["eng","ger","fre","jpan"];
+let [first,second]=lang;
+console.log(first);
+console.log(second);
+
+lang[2]="pers" ;
+console.log(lang)
+
+for (i in lang) {
+    console.log(i,lang[i]);
+}
+
