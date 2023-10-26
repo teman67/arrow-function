@@ -77,3 +77,56 @@ for (i in lang) {
     console.log(i,lang[i]);
 }
 
+/* Map method  */
+
+let nums = [1,2,3,4];
+let result3 = [];
+for (let i of nums){
+    result3.push(i*2)
+}
+
+console.log(result3)
+
+
+const multi = nums.map(i => i *2)
+console.log(multi)
+
+// With objects:
+const students = [
+    {
+      id: 1,
+      name: 'Mark',
+      profession: 'Developer',
+      skill: 'JavaScript'
+    },
+    {
+      id: 2,
+      name: 'Ariel',
+      profession: 'Developer',
+      skill: 'HTML'
+    },
+    {
+      id: 3,
+      name: 'Jason',
+      profession: 'Designer',
+      skill: 'CSS'
+    },
+  ];
+
+const studentIds = students.map(student => [student.name, student.id])
+console.log(studentIds)
+
+
+
+const addAges = students.map(student => ({
+...student,
+age: [32, 43, 54]
+}));
+console.log(addAges)
+
+
+
+const ages = [32, 43, 54];
+
+const addAges2 = students.map((student, index) => ({...student, age: ages[index]}));
+console.log(addAges2)
